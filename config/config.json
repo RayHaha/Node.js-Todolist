@@ -1,7 +1,4 @@
 {
-	"uname": "test",
-	"pwd": "test"
+	"uname": "test123",
+	"pwd": "test123"
 }
-// never do this in the real environment,
-// you need to encrypt the user information
-// then decrypt in code
