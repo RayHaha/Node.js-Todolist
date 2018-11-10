@@ -9,10 +9,14 @@ var configValues = require("./config");	// it'll look for .js or .json itself
 module.exports = {
 	getDbConnectionString: function(){
 		// in my case, I built mongodb on my computer, so I'll connect to localhost
-		// it fail, I try to use the db from mlab first then figure out the question
-		// finally, mlab work. So the error came from localhost mongodb
-		return "mongodb://" + configValues.uname + ":" + configValues.pwd 
-		+ "@ds017736.mlab.com:17736/nodetodosample";
+		// it fail, I try to use the db from mlab 
+		// now I solve the problem, the two lines follow were use to connect mlab
+		// return "mongodb://" + configValues.uname + ":" + configValues.pwd 
+		// + "@ds0177736.mlab.com:17736/nodetodosample";
+
+		// At the beginning, the localhost mongodb don't have user
+		// so I don't need to input the username and password
+		return "mongodb://@127.0.0.1:27017/nodetodosample";
 	}
 }
 // when require the config from outside the config folder,
