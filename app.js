@@ -11,6 +11,8 @@ var config = require("./config");
 // let the app be aware of the api endpoint
 // need to require the controller first
 var setupController = require("./controllers/setupController");
+// also the apicontroller
+var apiController = require("./controllers/apiController");
 
 
 // set up the port, if there is an environment variable then set up to it, otherwise 3000
@@ -27,6 +29,8 @@ mongoose.connect(config.getDbConnectionString(), {useNewUrlParser: true});
 // setupController is the function that return from require, and the function adds the endpoint to the express app
 // so what we need to to is pass the app to the function
 setupController(app);
+// so is apicontroller
+apiController(app);
 
 // listen on the port
 app.listen(port);

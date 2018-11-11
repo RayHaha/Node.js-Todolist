@@ -12,7 +12,7 @@ module.exports = {
 		// it fail, I try to use the db from mlab 
 		// now I solve the problem, the two lines follow were use to connect mlab
 		// return "mongodb://" + configValues.uname + ":" + configValues.pwd 
-		// + "@ds0177736.mlab.com:17736/nodetodosample";
+		// + "@ds017736.mlab.com:17736/nodetodosample";
 
 		// At the beginning, the localhost mongodb don't have user
 		// so I don't need to input the username and password
